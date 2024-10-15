@@ -1,5 +1,15 @@
-<h1>Simoda.NET サーバー選択</h1>
-<hr>
-<a href="https://padanko.v6.army">IPv6のみ対応(http)</a><br>
-<a href="http://padanko.v6.army">IPv6のみ対応(https)</a><br>
-<a href="http://www.ipv6proxy.net/go.php?u=http%3A%2F%2Fpadanko.v6.army%2F&b=1">デザインを犠牲にしたIPv4・IPv6対応</a><b style='color:red'>★おすすめ！！！★</b>
+<h1>IPv6が使用可能かどうか判定しています...</h1>
+<script>
+  function checkIPv6WithFetch() {
+  fetch('https://padanko.v6.army')
+    .then((response) => {
+      location.href="https://padanko.v6.army/chat";
+    })
+    .catch((error) => {
+      location.href="http://www.ipv6proxy.net/go.php?u=http%3A%2F%2Fpadanko.v6.army%2Fchat&b=1"
+    });
+  }
+  
+  checkIPv6WithFetch();
+
+</script>
