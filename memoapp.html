@@ -1,0 +1,17 @@
+<h1>IPv6が使用可能かどうか判定しています...</h1>
+<p>遅い場合はこちらから選択してください。</p>
+<a href="https://padanko.v6.army/memoapp">IPv6版</a> / <a href="http://www.ipv6proxy.net/go.php?u=http%3A%2F%2Fpadanko.v6.army%2Fmemoapp&b=1">IPv4版</a>
+<script>
+  function checkIPv6WithFetch() {
+  fetch('https://padanko.v6.army')
+    .then((response) => {
+      location.href="https://padanko.v6.army/memoapp";
+    })
+    .catch((error) => {
+      location.href="http://www.ipv6proxy.net/go.php?u=http%3A%2F%2Fpadanko.v6.army%2Fmemoapp&b=1"
+    });
+  }
+  
+  checkIPv6WithFetch();
+
+</script>
