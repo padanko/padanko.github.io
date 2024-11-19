@@ -1,3 +1,2 @@
 # GadaiDev.github.io
-なんかポータル的な
-ページ増やした
+Padanko(本澤勇誠)のホームページ

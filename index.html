@@ -3,31 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ウェブアセンブリ</title>
+    <title>本澤勇誠の静的サイト</title>
 </head>
 <body>
-    <h1>WASMテスト</h1>
-    <p>作:本澤勇誠</p>
-    <hr>
-    <p>WebAssembly(WASM)とは、W3C主導のもと開発された実行可能ファイルの一つです。</p>
-    <p>このページでは、WASMを使って<b>最大公約数</b>を求めます。</p>
-    <hr>
-    gcd(<input type="number" id="a">, <input type="number" id="b">) = <span id="c"></span><br>
-    <button onclick="keisan()">計算！</button>
-    <script>
-        function keisan() {
-            var a = document.getElementById("a").value;
-            var b = document.getElementById("b").value;
-            var c = document.getElementById("c");
-            fetch("https://padanko.github.io/GCD.wasm")
-            .then((response) => response.arrayBuffer())
-            .then((bytes) => WebAssembly.instantiate(bytes, importObject))
-            .then((results) => {
-                c.innerText = results.instance.exports.gcd(a,b);
-            });
-        }
-        
-        
-    </script>
+    <h1>本澤勇誠の静的サイト</h1>
+    <p>ソフトウェア作ったり。</p>
+    <b style="color:red">*GitHubでは、1リポジトリ<u>10GB</u>までなのでソフトウェアが消えたりするかも。よっぽどのことがない限り。</b><br>
+    <a href="otoku.zip">お得パック</a><br>
+
 </body>
 </html>
