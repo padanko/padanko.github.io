@@ -1,16 +1,25 @@
-<h1>IPv6が使用可能かどうか判定しています...</h1>
-<p>自動でサイトに入ります。ご了承ください。</p>
-<script>
-  function checkIPv6WithFetch() {
-  fetch('https://padanko.v6.army')
-    .then((response) => {
-      location.href="https://padanko.v6.army/";
-    })
-    .catch((error) => {
-      location.href="http://www.ipv6proxy.net/go.php?u=http%3A%2F%2Fpadanko.v6.army&b=1"
-    });
-  }
-  
-  checkIPv6WithFetch();
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ウェブアセンブリ</title>
+</head>
+<body>
+    <h1>WASMテスト</h1>
+    <p>作:本澤勇誠</p>
+    <hr>
+    <p>WebAssembly(WASM)とは、W3C主導のもと開発された実行可能ファイルの一つです。</p>
+    <p>このページでは、WASMを使って<b>最大公約数</b>を求めます。</p>
+    <hr>
+    <script>
+        fetch("https://github.com/padanko/WebAssemblys/raw/refs/heads/main/GCD.wasm")
+        .then((response) => response.arrayBuffer())
+        .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+        .then((results) => {
+            results.instance.exports.gcd(9,20);
+        });
 
-</script>
+    </script>
+</body>
+</html>
